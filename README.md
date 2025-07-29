@@ -57,7 +57,9 @@ Many patients receive their lab reports but struggle to interpret the medical ja
 ## 📦 Project Structure
 
 <img width="513" height="441" alt="image" src="https://github.com/user-attachments/assets/85831cbd-7f44-417e-a90c-eb4c9342dd57" />
-#🚀 Future Scope
+
+# Future Scope
+🚀 
 Add patient authentication + profile history
 
 Enable direct WhatsApp or PDF summary sharing
