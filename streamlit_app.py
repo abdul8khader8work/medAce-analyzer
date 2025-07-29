@@ -410,10 +410,10 @@ from PIL import Image
 import io
 import matplotlib.pyplot as plt
 import re
-from openai import OpenAI  # ✅ ChatGPT Integration (new SDK)
+from groq import Groq  # ✅ Replaced OpenAI with Groq
 
-# ✅ Initialize OpenAI client using new SDK
-client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+# ✅ Initialize Groq client
+client = Groq(api_key=st.secrets["GROQ_API_KEY"])  # 🔒 Put this in .streamlit/secrets.toml
 
 # Page setup
 st.set_page_config(page_title="MedAce", layout="wide")
@@ -517,7 +517,7 @@ with right_col:
             with st.spinner("Thinking..."):
                 try:
                     response = client.chat.completions.create(
-                        model="gpt-3.5-turbo",
+                        model="llama3-8b-8192",  # ✅ Use llama3-70b-8192 if you want heavy-duty
                         messages=[
                             {
                                 "role": "system",
